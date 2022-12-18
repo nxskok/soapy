@@ -1,0 +1,24 @@
+---
+title: "Data Report"
+author: "Ken Butler"
+date: "2022-12-18"
+output: 
+  html_document:
+    df_print: paged
+---
+
+```{r}
+#| setup,
+#| echo = FALSE
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+This report contains some analysis of one or more datasets.
+
+```{r}
+#| child = "report/soap.Rmd"
+```
+
+
+ 

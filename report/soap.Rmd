@@ -1,0 +1,25 @@
+
+# The soap data
+
+A company operates two production lines in a factory for making soap bars. The production lines are labelled A and B. A production line that moves faster may produce more soap, but may possibly also produce more “scrap” (that is, bits of soap that can no longer be made into soap bars and will have to be thrown away).
+
+The data:
+
+```{r}
+tar_read(soap)
+```
+
+We can plot scrap against speed separately for each line, thus:
+
+```{r}
+tar_read(plot1)
+```
+
+This suggests an ANCOVA model with a common slope:
+
+```{r}
+summary(tar_read(model1))
+```
+
+
+We see that scrap depends independently on speed and on production line. An increase in speed of one unit increases the amount of scrap by 1.23 units on average (for either production line), and line A produces about 53 units more scrap than line B, at the same speed.
