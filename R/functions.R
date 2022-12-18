@@ -11,3 +11,13 @@ plot_lines <- function(x) {
 fit_model1 <- function(x) {
   lm(scrap ~ speed + line, data = x)
 }
+
+dummy_dep <- function(soap_report_file, data, graph, model) {
+  soap_report_file
+}
+
+render_final <- function(full_report_file, soap_report) {
+  rmarkdown::render(full_report_file,
+                    knit_root_dir = getwd(),
+                    quiet = TRUE)
+}
