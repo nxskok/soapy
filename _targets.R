@@ -31,5 +31,7 @@ list(
   tar_target(soap, read_data(file1)),
   tar_target(plot1, plot_lines(soap)),
   tar_target(model1, fit_model1(soap)),
+  tar_target(soap_report, "report/soap.Rmd", format = "file"),
+  tar_target(big_report, "report/report.Rmd", format = "file"),
   tar_render(final_report, "report/report.Rmd")
 )
