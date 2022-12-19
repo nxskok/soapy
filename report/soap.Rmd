@@ -8,7 +8,8 @@ hello, added and then taken away
 The data:
 
 ```{r}
-tar_read(soap)
+tar_load(soap)
+soap
 ```
 
 We can plot scrap against speed separately for each line, thus:
