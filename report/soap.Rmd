@@ -6,7 +6,8 @@ A company operates two production lines in a factory for making soap bars. The p
 The data:
 
 ```{r}
-tar_read(soap)
+tar_load(soap)
+soap
 ```
 
 We can plot scrap against speed separately for each line, thus:

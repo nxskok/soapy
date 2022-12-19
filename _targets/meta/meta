@@ -5,13 +5,14 @@ file1|stem|06852aa22b909bb1|e2bbb2985a58ece3|265c99d30a993adf|1783999986|data/so
 file1_url|stem|9e4087700fa7f598|79fb70061337db73|602c5378d62b59c4|382450434|http://ritsokiguess.site/datafiles/soap.txt|t19344.0909072383s||0|url|local|vector|||0.903||
 final_report|stem|67c6288fb22b7075|2540d9121eb15ce4|089142d4e4514a33|-70457706|/home/ken/Documents/r-projects/soapy/report/report.html|t19344.9463614408s|a1473a3bd45d4619|744793|file|local|vector|||2.498||
 fit_model1|function|04de55582d32259a|||||||||||||||
+full_report|stem|466ae198c9d0430f|67ac02b970601168|d5bed8666d3f3f3e|1727840424|report/report.html*report/report.Rmd|t19345.1447483422s|affed6fc6cabac98|745122|file|local|vector|||3.296||
 model1|stem|197e81345596db66|0d8bd50eb92a34e5|282c1caf98f16c57|-2049561030||t19344.8508189571s|226b5de08ba36caf|2491|rds|local|vector|||0.043||
 plot_lines|function|13951708c13cac73|||||||||||||||
-plot1|stem|0b8cb0191a83c2f0|e80ddbd10ed39a0c|d048d9d9d54db7d0|1351247401||t19344.0909104574s|bff866dc3686e4e9|48104|rds|local|vector|||0.05||
+plot1|stem|0b8cb0191a83c2f0|e80ddbd10ed39a0c|d048d9d9d54db7d0|1351247401||t19345.1363356289s|bff866dc3686e4e9|48104|rds|local|vector|||0.01||
 read_data|function|30137ae26bc4cd00|||||||||||||||
 render_final|function|0bbce267775d98fa|||||||||||||||
 soap|stem|217fd1a7703c2adc|670e435152344cd2|81e7d3009f464ed9|1033443299||t19344.0909100408s|8fdac5baae0b04f8|526|rds|local|vector|||0.372||
-soap_report|stem|07d80bd7b5a1db3e|7f11b839c372a22f|2b208e5741e361cd|288202288|report/soap.Rmd|t19344.9463002838s|3a1b6f7b11cba393|916|file|local|vector|||0.001||
+soap_report|stem|ae9320907e12efe1|1e3db69a25f4015d|ef46db3751d8e999|288202288|report/soap.Rmd|t19345.1445504273s|2c7be58fff91f2d1|921|file|local|vector|||1.236||
 thingy|function|79454e60d985828f|||||||||||||||
 thingy1|function|c8713d5e8f7ffe15|||||||||||||||
 thingy2|function|0bbce267775d98fa|||||||||||||||

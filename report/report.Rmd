@@ -17,8 +17,14 @@ knitr::opts_chunk$set(echo = FALSE)
 This report contains some analysis of one or more datasets.
 
 ```{r}
+tar_load(soap_report)
+```
+
+
+```{r}
 #| child = "report/soap.Rmd"
 ```
+
 
 
  
