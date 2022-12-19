@@ -18,6 +18,7 @@ This report contains some analysis of one or more datasets.
 
 ```{r}
 tar_load(soap_report)
+tar_load(spiders_report)
 ```
 
 
@@ -25,6 +26,17 @@ tar_load(soap_report)
 #| child = "report/soap.Rmd"
 ```
 
+turn code back on
+
+```{r}
+#| echo = FALSE
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+#| child = "report/spiders.Rmd"
+```
 
 
  

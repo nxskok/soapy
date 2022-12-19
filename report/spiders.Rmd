@@ -1,0 +1,37 @@
+# Spiders on the beach
+
+A team of Japanese researchers were investigating what would cause the burrowing wolf spider *Lycosa ishikariana* to be found on a beach. They hypothesized that it had to do with the size of the grains of sand on the beach. They went to 28 beaches in Japan, measured the average sand grain size (in millimetres), and observed the presence or absence of this particular spider on each beach.
+
+We read in and examine the data first. The layout of the data implies `read_table`:
+
+```{r}
+my_url <- "http://ritsokiguess.site/datafiles/spiders.txt"
+spider <- read_table(my_url)
+spider
+```
+
+The response variable is `Spiders`, which indicates whether or not this spider is present on the beach concerned. This is categorical, so to model how this depends on grain size, we need a logistic regression.
+
+One way to make a graph is to note that we have one categorical and one quantitative variable, and thus to make a boxplot:
+
+```{r}
+ggplot(spider, aes(x = Spiders, y = Grain.size)) + geom_boxplot()
+```
+
+This says that when spiders are present, the grains of sand tend to be larger (and when they are absent, the grains tend to be smaller). Logically, though, this is the wrong way around, because it suggests that grain size is the response and presence/absence of spiders is explanatory, whereas in fact these should be reversed.
+
+The value of the plot, though, is to illustrate that there seems to be a connection between grain size and presence/absence of spiders, which is what we wanted to know.
+
+Now we fit the logistic regression:
+
+```{r}
+Spiders.1 <- glm(factor(Spiders) ~ Grain.size, family = "binomial", data = spider)
+summary(Spiders.1)
+```
+
+It turns out that the effect of grain size is not quite significant (at $\alpha = 0.05$). This is for a couple of reasons:
+
+- the sample size ($n = 28$) is not very large for a logistic regression, because each beach only contains information about whether the spider is present or not (not, for example, how many spiders were seen)
+- the boxplot shows that there is substantial overlap in grain sizes between beaches where the spider was present and where it was absent. Some of the beaches with the spider have small grain sizes, and there are two outlier (high) grain sizes on beaches without the spider. 
+
+Though there is a tendency for the spider to be present on beaches where the grains are larger and absent where the grains are smaller, this tendency is not clear-cut enough to be generalizable to other beaches.

@@ -1,0 +1,21 @@
+# Spiders on the beach
+
+A team of Japanese researchers were investigating what would cause the burrowing wolf spider *Lycosa ishikariana* to be found on a beach. They hypothesized that it had to do with the size of the grains of sand on the beach. They went to 28 beaches in Japan, measured the average sand grain size (in millimetres), and observed the presence or absence of this particular spider on each beach.
+
+We read in and examine the data first. The layout of the data implies `read_table`:
+
+```{r}
+my_url <- "http://ritsokiguess.site/datafiles/spiders.txt"
+spider <- read_table(my_url)
+spider
+```
+
+The response variable is `Spiders`, which indicates whether or not this spider is present on the beach concerned. This is categorical, so to model how this depends on grain size, we need a logistic regression.
+
+One way to make a graph is to note that we have one categorical and one quantitative variable, and thus to make a boxplot:
+
+```{r}
+ggplot(spider, aes(x = Spiders, y = Grain.size)) + geom_boxplot()
+```
+
+

@@ -32,9 +32,6 @@ list(
   tar_target(plot1, plot_lines(soap)),
   tar_target(model1, fit_model1(soap)),
   tar_target(soap_report, "report/soap.Rmd", format = "file"),
+  tar_target(spiders_report, "report/spiders.Rmd", format = "file"),
   tar_render(full_report, "report/report.Rmd")
-  # tar_target(soap_report, dummy_dep("report/soap.Rmd", soap, plot1, model1),
-  #            format = "file"),
-  # tar_target(final_report, render_final("report/report.Rmd", soap_report),
-  #            format = "file")
 )
