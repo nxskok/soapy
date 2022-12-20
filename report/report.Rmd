@@ -26,7 +26,6 @@ tar_load(spiders_report)
 #| child = "report/soap.Rmd"
 ```
 
-turn code back on
 
 ```{r}
 #| echo = FALSE
